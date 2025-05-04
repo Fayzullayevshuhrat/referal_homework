@@ -13,8 +13,7 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command, CommandObject
 from aiogram.types import Message
 from aiogram.utils.deep_linking import create_start_link
-
-TOKEN = "7828936588:AAH_6TBsJjcRyZ6YP-SyQEmotO4_xfHMDWw"
+from config import TOKEN
 
 bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
