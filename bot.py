@@ -47,15 +47,15 @@ async def command_start_handler(message: Message, command: CommandObject) -> Non
             ref_id = command.args
             if ref_id != user_id and ref_id in data:
                 data[ref_id]["ref_count"] += 1
-                await message.answer(f"Siz {ref_id} foydalanuvchi orqali keldingiz!")
+                await message.answer(f"Siz {ref_id} foydalanuvchi tomonidan keldingiz!")
 
     write(data)
-    await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!")
+    await message.answer(f"Salom, {html.bold(message.from_user.full_name)}!")
 
 @dp.message(Command("refer"))
 async def refer_handler(message: Message) -> None:
     link = await create_start_link(bot=bot, payload=str(message.from_user.id))
-    await message.answer(f"Referal havolangiz:\n{link}")
+    await message.answer(f"Referal havola:\n{link}")
 
 @dp.message(Command("count"))
 async def count_handler(message: Message) -> None:

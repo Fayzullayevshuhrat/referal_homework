@@ -35,7 +35,7 @@ async def command_start_handler(message: Message, command: CommandObject) -> Non
     ref_id = command.args
     if ref_id:
         data[ref_id] = data.get(ref_id, 0) + 1
-        await message.answer(f"Siz quyidagi userdan referal olgansiz {ref_id}")
+        await message.answer(f"Siz shu userdan referal olgansiz {ref_id}")
     write(data)
 
 @dp.message(Command("refer"))
