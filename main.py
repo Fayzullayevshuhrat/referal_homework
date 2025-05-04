@@ -9,7 +9,7 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command, CommandObject
 from aiogram.types import Message
 from aiogram.utils.deep_linking import create_start_link
-from config import  TOKENGI
+from config import  TOKEN
 data = {}
 
 
